@@ -24,7 +24,7 @@ let idx;
 
 
 client.on('ready', () => {
-    client.user.setActivity('オ何ー？')
+    client.user.setActivity('.ブンブンハローRED♪TUBE(type .help)')
     
 });
 
