@@ -22,6 +22,14 @@ let sa_second;
 let sa_minute;
 let idx;
 
+let transb=[
+    "tntn",
+    "コラボレーション"
+]
+let transa = [
+    "tntn♪",
+    "コラボレーション！？"
+]
 
 client.on('ready', () => {
     client.user.setActivity('ブンブンハローRED♪TUBE(type .help)')
@@ -34,7 +42,9 @@ client.on('message', msg => {
     }
     if(msg.content.match(".ht")){
         let msage = msg.content.slice(4)
-        msage = msage.replace('tn','tntn')
+        for(i=0;i=transa.length;i++){
+            msage.msage.replace(transb[i],transa[i])
+        }
         msg.channel.send(msage)
     }
     if(msg.content === '.ピーチは抜ける'){
