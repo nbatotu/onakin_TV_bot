@@ -34,7 +34,7 @@ client.on('message', msg => {
     }
     if(msg.content === '.test'){
         let peach = Math.floor( Math.random() * 191 ) ;
-        msg.channel.send({ files: ['./peachimages/peach (2).jpg'] })
+        msg.channel.send({ files: ['./peachimages/peach ('+peach+').jpg'] })
     }
     if(msg.content === '.help'){
         msg.reply('');
