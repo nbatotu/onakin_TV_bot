@@ -42,7 +42,7 @@ client.on('message', msg => {
     }
     if(msg.content.match(".ht")){
         let msage = msg.content.slice(4)
-        for(i=0;i=transa.length;i++){
+        for(i=0;i=transa.length-1;i++){
             msage = msage.replace(transb[i],transa[i])
         }
         msg.channel.send(msage)
