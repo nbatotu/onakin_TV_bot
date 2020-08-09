@@ -32,7 +32,7 @@ client.on('message', msg => {
     if (msg.author.id === client.user.id) {
         return;
     }
-    if(msg.content === '.test'){
+    if(msg.content === '.ピーチは抜ける'){
         let peach = Math.floor( Math.random() * 191 ) ;
         msg.channel.send({ files: ['./peachimages/peach ('+peach+').jpg'] })
     }
