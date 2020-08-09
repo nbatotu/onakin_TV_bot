@@ -15,6 +15,8 @@ let hikagao = false
 let randomhikakin = requi.vide;
 let resachara = requi.resa;
 let hikasin = requi.sinsu;
+let transa = requi.tra;
+let transb = requi.trb;
 
 let now;
 let oldsecond;
@@ -22,14 +24,7 @@ let sa_second;
 let sa_minute;
 let idx;
 
-let transb=[
-    "tntn",
-    "コラボレーション"
-]
-let transa = [
-    "tntn♪",
-    "コラボレーション！？"
-]
+
 
 client.on('ready', () => {
     client.user.setActivity('ブンブンハローRED♪TUBE(type .help)')

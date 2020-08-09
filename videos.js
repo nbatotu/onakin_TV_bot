@@ -893,6 +893,46 @@ let resachara = [
     "セクシャルキン\n主な動画:https://www.nicovideo.jp/watch/sm36511851",
 ]
 
+let tranb=[
+    "僕",
+    "ション",
+    "メルカリ",
+    "youtube",
+    "スーパー",
+    "大変",
+    "本",
+    "夢",
+    "今",
+    "菓子",
+    "怖",
+    "コロナ",
+    "ヒカキン",
+    "仕事",
+    "動画",
+    "漫画",
+    "Twitter",
+]
+let trana = [
+    "僕TN♪",
+    "ション！？",
+    "メサムラ",
+    "RED♪Tube",
+    "スーパーパンパンボム",
+    "変大",
+    "エロ本",
+    "果てしなく続く空その先にある物",
+    "過去と未来の狭間",
+    "○子",
+    "エロ",
+    "エイズ",
+    "オナキン",
+    "枕仕事",
+    "AV動画",
+    "満己",
+    "Sikotter",
+
+]
+
 let hikamanisinsu = [
     "4545",
     "128ギガ",
@@ -914,3 +954,5 @@ let hikamanisinsu = [
 module.exports.sinsu = hikamanisinsu;
 module.exports.resa = resachara;
 module.exports.vide = randomhikakinvideos;
+module.exports.tra = trana;
+module.exports.trb = tranb;
