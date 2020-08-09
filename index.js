@@ -34,7 +34,7 @@ client.on('message', msg => {
     }
     if(msg.content.startsWith(".ht")){
         let msg = msg.content.slice(4)
-        msg.channel.send()
+        msg.channel.send(msg)
     }
     if(msg.content === '.ピーチは抜ける'){
         let peach = Math.floor( Math.random() * 191 ) ;
