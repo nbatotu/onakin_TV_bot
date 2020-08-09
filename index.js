@@ -34,6 +34,7 @@ client.on('message', msg => {
     }
     if(msg.content.match(".ht")){
         let msage = msg.content.slice(4)
+        msage = msage.replace('tn','tntn')
         msg.channel.send(msage)
     }
     if(msg.content === '.ピーチは抜ける'){
