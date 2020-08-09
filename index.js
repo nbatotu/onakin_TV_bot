@@ -24,7 +24,7 @@ let idx;
 
 
 client.on('ready', () => {
-    client.user.setActivity('.ブンブンハローRED♪TUBE(type .help)')
+    client.user.setActivity('ブンブンハローRED♪TUBE(type .help)')
     
 });
 
@@ -33,7 +33,8 @@ client.on('message', msg => {
         return;
     }
     if(msg.content === '.test'){
-        msg.reply('1');
+        let peach = Math.floor( Math.random() * 191 ) ;
+        msg.channel.send({ files: ['./peachimages/peach (2).jpg'] })
     }
     if(msg.content === '.help'){
         msg.reply('');
