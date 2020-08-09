@@ -32,7 +32,7 @@ client.on('message', msg => {
     if (msg.author.id === client.user.id) {
         return;
     }
-    if(msg.content.startsWith(".ht")){
+    if(msg.content.match(".ht")){
         let msg = msg.content.slice(4)
         msg.channel.send(msg)
     }
