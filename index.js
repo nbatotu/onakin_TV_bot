@@ -42,8 +42,8 @@ client.on('message', msg => {
     }
     if(msg.content.match(".ht")){
         let msage = msg.content.slice(4)
-        for(i=0;i=transa.length-1;i++){
-            msage = msage.replace(transb[i],transa[i])
+        for(i=0;i<transa.length;i++){
+            msage = msage.replace(transb[i],transa[i],"g")
         }
         msg.channel.send(msage)
     }
