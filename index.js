@@ -33,8 +33,8 @@ client.on('message', msg => {
         return;
     }
     if(msg.content.match(".ht")){
-        let msg = msg.content.slice(4)
-        msg.channel.send(msg)
+        let msage = msg.content.slice(4)
+        msg.channel.send(msage)
     }
     if(msg.content === '.ピーチは抜ける'){
         let peach = Math.floor( Math.random() * 191 ) ;
