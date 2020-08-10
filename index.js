@@ -46,9 +46,6 @@ client.on('message', msg => {
         let peach = Math.floor( Math.random() * 191 ) ;
         msg.channel.send({ files: ['./peachimages/peach ('+peach+').jpg'] })
     }
-    if(msg.content === '.help'){
-        msg.reply('');
-    }
     if(msg.content === '.ヒカ顔じゃんけん'){
         msg.reply('ヒカ顔じゃんけんじゃんけんじゃんけんじゃんけん♪');
         hikagao = true;
