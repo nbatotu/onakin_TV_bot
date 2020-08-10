@@ -37,8 +37,11 @@ client.on('message', msg => {
     }
     if(msg.content.match(".ht")){
         let msage = msg.content.slice(4)
+        for (let key in transb) {
+            msage = msage.replace(new RegExp(key,"g"),transb[key])
+        }
         for(i=0;i<transa.length;i++){
-            msage = msage.replace(new RegExp(transb[i],"g"),transa[i])
+            
         }
         msg.channel.send(msage)
     }
