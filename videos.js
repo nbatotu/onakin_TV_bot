@@ -904,8 +904,8 @@ let tranb={
     "Instagram":"自己満グラム",
     "行く":"い～悔～",
     "33":"33時間7分",
-    "ゴキブリ":"ゴキブリ",
-    "マリオ":"マリオ",
+    "ゴキブリ":"マリオ",
+    "マリオ":"ゴキブリ",
     "今日":"過去と未来の狭間の日",
     "何":"オォ何",
     "ルイージ":"蜘蛛",
@@ -944,58 +944,6 @@ let tranb={
     "土":"膣",
     "出てる":"超出てる超出てる！"
 }
-let trana = [
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-]
-
 let hikamanisinsu = [
     "4545",
     "128ギガ",
@@ -1017,5 +965,4 @@ let hikamanisinsu = [
 module.exports.sinsu = hikamanisinsu;
 module.exports.resa = resachara;
 module.exports.vide = randomhikakinvideos;
-module.exports.tra = trana;
 module.exports.trb = tranb;

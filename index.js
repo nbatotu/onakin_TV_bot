@@ -15,7 +15,6 @@ let hikagao = false
 let randomhikakin = requi.vide;
 let resachara = requi.resa;
 let hikasin = requi.sinsu;
-let transa = requi.tra;
 let transb = requi.trb;
 
 let now;
