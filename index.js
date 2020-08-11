@@ -39,9 +39,6 @@ client.on('message', msg => {
         for (let key in transb) {
             msage = msage.replace(new RegExp(key,"g"),transb[key])
         }
-        for(i=0;i<transa.length;i++){
-            
-        }
         msg.channel.send(msage)
     }
     if(msg.content === '.ピーチは抜ける'){
