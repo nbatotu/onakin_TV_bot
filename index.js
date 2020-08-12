@@ -42,9 +42,11 @@ client.on('message', msg => {
         .then(connection => {
             msg.reply('接続しました。')
             connection.play('test.mp3')
-            dispatcher.on('end', reason => {
+            if(msg.content === '.stop'){
                 connection.disconnect();
-            });
+            }
+            
+
         });
       } 
     if(msg.content.match(".ht")){
