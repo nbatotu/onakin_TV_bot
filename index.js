@@ -41,7 +41,7 @@ client.on('message', msg => {
         channel.join()
         .then(connection => {
             msg.reply('接続しました。')
-            connection.playFile('test.mp3')
+            connection.play('test.mp3')
             dispatcher.on('end', reason => {
                 connection.disconnect();
             });
