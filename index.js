@@ -34,6 +34,18 @@ client.on('message', msg => {
     if (msg.author.id === client.user.id) {
         return;
     }
+    if(msg.content === '.通話'){
+        if (message.isMemberMentioned(client.user) && message.member.voiceChannel)
+        {
+            message.member.voiceChannel.join().then( connection => {
+                dispatcher.on('end', reason => {
+                    connection.disconnect();
+                });
+            })
+            .catch(console.log);
+            return;
+        }
+    }
     if(msg.content.match(".ht")){
         let msage = msg.content.slice(4)
         for (let key in transb) {
