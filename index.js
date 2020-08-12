@@ -35,15 +35,7 @@ client.on('message', msg => {
         return;
     }
     if(msg.content === '.通話'){
-        const channel = client.channels.get(msg.channel.id);
-        if (!channel) return console.error("The channel does not exist!");
-        channel.join().then(connection => {
-          // Yay, it worked!
-          console.log("Successfully connected.");
-        }).catch(e => {
-          // Oh no, it errored! Let's log it to console
-          console.error(e);
-        });
+      
     }
     if(msg.content.match(".ht")){
         let msage = msg.content.slice(4)
