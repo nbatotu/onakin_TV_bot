@@ -41,7 +41,7 @@ client.on('message', msg => {
           // Yay, it worked!
           console.log("Successfully connected.");
         }).catch(e => {
-          // Oh no, it errored! Let's log it to console :)
+          // Oh no, it errored! Let's log it to console
           console.error(e);
         });
     }
