@@ -40,7 +40,10 @@ client.on('message', msg => {
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください！')
         channel.join()
         .then(connection => {
-            connection.playFile('test.wav')
+            connection.playFile('test.mp3')
+            dispatcher.on('end', reason => {
+                connection.disconnect();
+            });
         });
       } 
     if(msg.content.match(".ht")){
