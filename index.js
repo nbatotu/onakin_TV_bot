@@ -34,12 +34,12 @@ client.on('message', msg => {
     if (msg.author.id === client.user.id) {
         return;
     }
-    if (msg.content.startsWith('.joins') && msg.guild) {
+    if (msg.content.startsWith('.join server') && msg.guild) {
         let channel = msg.member.voice.channel
         // コマンドを実行したメンバーがボイスチャンネルに入ってなければ処理を止める
-        if (!channel) return msg.reply('先にボイスチャンネルに参加してください！');
-    } 
-
+        if (!channel) return msg.reply('先にボイスチャンネルに参加してください！')
+        channel.join()
+      } 
     if(msg.content.match(".ht")){
         let msage = msg.content.slice(4)
         for (let key in transb) {
