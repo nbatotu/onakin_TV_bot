@@ -42,13 +42,11 @@ client.on('message', msg => {
         .then(connection => {
             msg.reply('接続しました。')
             connection.play('test.mp3')
-            if(msg.content === '.stop'){
-                msg.reply('a')
-            }
-            
-
         });
-      } 
+    } 
+    if(msg.content === '.stops'){
+        msg.member.voice.channel.leave();
+    }
     if(msg.content.match(".ht")){
         let msage = msg.content.slice(4)
         for (let key in transb) {
