@@ -43,7 +43,7 @@ client.on('message', msg => {
             msg.reply('接続しました。')
             connection.play('test.mp3')
             if(msg.content === '.stop'){
-                connection.disconnect();
+                msg.reply('a')
             }
             
 
