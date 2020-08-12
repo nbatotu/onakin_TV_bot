@@ -35,9 +35,15 @@ client.on('message', msg => {
         return;
     }
     if (msg.content.startsWith('.joins') && msg.guild) {
-        msg.member.voiceChannel.join().then( connection => {
-            connection.playFile('test.wav');
-        })
+        let channel = msg.member.voice.channel
+        // コマンドを実行したメンバーがボイスチャンネルに入ってなければ処理を止める
+        if (!channel) return msg.reply('先にボイスチャンネルに参加してください！')
+        .then(connection => { 
+
+            console.log("Joined voice channel!");
+
+           connection.playFile();
+        });
     } 
 
     if(msg.content.match(".ht")){
