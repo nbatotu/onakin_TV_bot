@@ -40,6 +40,7 @@ client.on('message', msg => {
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください！')
         channel.join()
         .then(connection => {
+            msg.reply('接続しました。')
             connection.playFile('test.mp3')
             dispatcher.on('end', reason => {
                 connection.disconnect();
