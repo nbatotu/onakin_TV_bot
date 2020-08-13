@@ -40,7 +40,7 @@ client.on('message', msg => {
         // コマンドを実行したメンバーがボイスチャンネルに入ってなければ処理を止める
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
         channel.join().then(connection => {
-            msg.reply('接続しました。')
+            msg.reply(mp3+'を再生します')
             connection.play(mp3)
         });
     } 
