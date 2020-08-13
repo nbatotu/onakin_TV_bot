@@ -39,17 +39,9 @@ client.on('message', msg => {
         // コマンドを実行したメンバーがボイスチャンネルに入ってなければ処理を止める
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
         channel.join()
+        msg.reply('joined')
     } 
-    if(msg.content.startsWith('.play ')){
-    let channel = msg.member.voice.channel
-    let mp3 = msg.content.slice(6)+'.mp3'
-    msg.channel.send(mp3)
-    if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
-    channel.join().then(connection => {
-        msg.reply('接続しました。')
-        connection.play(mp3)
-    });
-    }
+    
     if(msg.content === '.stops'){
         let channel = msg.member.voice.channel
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
