@@ -37,14 +37,18 @@ client.on('message', msg => {
     if (msg.content.startsWith('.play') && msg.guild) {
         let channel = msg.member.voice.channel
         let sound = msg.content.slice(6).split(",")
-        let length = sound.length -1;
-        let mp3 = 'sound/'+msg.content.slice(6)+'.mp3'
+        let _length = sound.length -1;
         // コマンドを実行したメンバーがボイスチャンネルに入ってなければ処理を止める
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
         channel.join().then(connection => {
             function layp(){
-                connection.play('sound/'+sound[length]+'.mp3')
-                msg.reply(sound[length]+'を再生します')
+                const dis = connection.play('sound/'+sound[_length]+'.mp3')
+                msg.reply(sound[_length]+'を再生します')
+                dis.on('end', () => {                       
+                    if(sound.length-1===_length)
+                    _length +=1;
+                    layp();
+                });
             }
             layp();
         });
