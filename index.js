@@ -42,11 +42,10 @@ client.on('message', msg => {
     } 
     if(msg.content.startsWith('.play ')){
     let channel = msg.member.voice.channel
-    channel.join()
     let mp3 = msg.content.slice(6)+'.mp3'
     msg.channel.send(mp3)
     if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
-    .then(connection => {
+    channel.join().then(connection => {
         msg.reply('接続しました。')
         connection.play(mp3)
     });
