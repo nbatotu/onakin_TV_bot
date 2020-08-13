@@ -44,10 +44,6 @@ client.on('message', msg => {
             function layp(){
                 const dis = connection.play('sound/'+sound[_length]+'.mp3')
                 msg.reply(sound[_length]+'を再生します')
-                dis.on('end', reason => {       
-                    connection.disconnect();                
-                    
-                });
             }
             layp();
         });
