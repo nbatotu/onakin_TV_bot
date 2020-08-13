@@ -36,11 +36,12 @@ client.on('message', msg => {
     }
     if (msg.content.startsWith('.play') && msg.guild) {
         let channel = msg.member.voice.channel
+        let mp3 = 'sound/'+msg.content.slice(6)+'.mp3'
         // コマンドを実行したメンバーがボイスチャンネルに入ってなければ処理を止める
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
         channel.join().then(connection => {
             msg.reply('接続しました。')
-            connection.play('test.mp3')
+            connection.play(mp3)
         });
     } 
     
