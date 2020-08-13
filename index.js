@@ -41,11 +41,8 @@ client.on('message', msg => {
         // コマンドを実行したメンバーがボイスチャンネルに入ってなければ処理を止める
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
         channel.join().then(connection => {
-            function layp(){
-                const dis = connection.play('sound/'+sound[_length]+'.mp3')
-                msg.reply(sound[_length]+'を再生します')
-            }
-            layp();
+            connection.play('sound/'+sound[_length]+'.mp3')
+            msg.reply(sound[_length]+'を再生します')
         });
     } 
     
