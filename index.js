@@ -8,6 +8,9 @@ const hikagaos = ["https://i.imgur.com/s779CIq.gif","https://i.imgur.com/MlLATux
 let onakintimer_name = [];
 let onakintimer_time = [];
 
+let tamago_name = [];
+let tamago_num = [];
+
 let jankeka
 let rep = false
 let hikagao = false
@@ -47,19 +50,28 @@ client.on('message', msg => {
     } 
     if(msg.content === '.卵運試し'){
         let channel = msg.member.voice.channel
+        idx = tamago_name.indexOf(msg.guild.id)
+        if(idx==-1){
+            tamago_name.push(msg.guild.id)
+            tamago_num.push(0)
+            idx = tamago_name.indexOf(msg.guild.id)
+        }
+        
         let peach = Math.floor( Math.random() * 10 ) ;
         // コマンドを実行したメンバーがボイスチャンネルに入ってなければ処理を止める
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
         channel.join().then(connection => {
             if(peach == 3){
-                msg.reply('残念！卵です！\nhttps://i.imgur.com/3NsWfhZ.png')
+                tamago_num[idx] = 0;
+                msg.reply('残念！卵です！点数をリセットします\nhttps://i.imgur.com/3NsWfhZ.png')
                 connection.play('sound/Hikakin from the far east.mp3')
             }else{
-                msg.reply('おめでとうございます！卵を回避しました！')
+                tamago_num[idx] + 1;
+                msg.reply('おめでとうございます！卵を回避しました！\n現在'+tamago_num[idx]+'点です')
                 connection.play('sound/HIKAKINTV.mp3')
             }
-            
         });
+    
     }
     if(msg.content === '.stops'){
         let channel = msg.member.voice.channel
