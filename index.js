@@ -48,7 +48,7 @@ client.on('message', msg => {
             connection.play(mp3)
         });
     } 
-    if(msg.content === '.卵運試し'){
+    if(msg.content === '.玉ひげ危機一発' || msg.content ==='egg'){
         let channel = msg.member.voice.channel
         idx = tamago_name.indexOf(msg.guild.id)
         if(idx==-1){
@@ -62,8 +62,8 @@ client.on('message', msg => {
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
         channel.join().then(connection => {
             if(peach == 3){
+                msg.reply('残念！卵です！点数をリセットします\n記録は'+tamago_num[idx]+'点です\nhttps://i.imgur.com/3NsWfhZ.png')
                 tamago_num[idx] = 0;
-                msg.reply('残念！卵です！点数をリセットします\nhttps://i.imgur.com/3NsWfhZ.png')
                 connection.play('sound/Hikakin from the far east.mp3')
             }else{
                 tamago_num[idx] += 1;
