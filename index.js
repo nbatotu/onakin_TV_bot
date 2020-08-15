@@ -45,7 +45,22 @@ client.on('message', msg => {
             connection.play(mp3)
         });
     } 
-    
+    if(msg.content === '.卵運試し'){
+        let channel = msg.member.voice.channel
+        let peach = Math.floor( Math.random() * 10 ) ;
+        // コマンドを実行したメンバーがボイスチャンネルに入ってなければ処理を止める
+        if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
+        channel.join().then(connection => {
+            if(peach == 3){
+                msg.reply('残念！卵です！\nhttps://i.imgur.com/3NsWfhZ.png')
+                connection.play('sound/Hikakin from the far east.mp3')
+            }else{
+                msg.reply('おめでとうございます！卵を回避しました！')
+                connection.play('sound/HIKAKINTV.mp3')
+            }
+            
+        });
+    }
     if(msg.content === '.stops'){
         let channel = msg.member.voice.channel
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
