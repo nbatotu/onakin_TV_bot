@@ -48,7 +48,7 @@ client.on('message', msg => {
             connection.play(mp3)
         });
     } 
-    if(msg.content === '.玉ひげ危機一発' || msg.content ==='egg'){
+    if(msg.content === '.玉ひげ危機一発' || msg.content ==='.egg'){
         let channel = msg.member.voice.channel
         idx = tamago_name.indexOf(msg.guild.id)
         if(idx==-1){
