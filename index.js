@@ -66,7 +66,7 @@ client.on('message', msg => {
                 msg.reply('残念！卵です！点数をリセットします\nhttps://i.imgur.com/3NsWfhZ.png')
                 connection.play('sound/Hikakin from the far east.mp3')
             }else{
-                tamago_num[idx] + 1;
+                tamago_num[idx] += 1;
                 msg.reply('おめでとうございます！卵を回避しました！\n現在'+tamago_num[idx]+'点です')
                 connection.play('sound/HIKAKINTV.mp3')
             }
