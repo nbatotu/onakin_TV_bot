@@ -12,8 +12,8 @@ let tamago_name = [];
 let tamago_num = [];
 
 let jankeka
-let rep = false
-let hikagao = false
+let rep = false;
+let hikagao = false;
 
 let randomhikakin = requi.vide;
 let resachara = requi.resa;
