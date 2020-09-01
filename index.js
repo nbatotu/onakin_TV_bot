@@ -78,7 +78,7 @@ client.on('message', msg => {
         if (!channel) return msg.reply('先にボイスチャンネルに参加してください。')
         channel.leave();
     }
-    if(msg.content.match(".ht")){
+    if(msg.content.startsWith(".ht")){
         let msage = msg.content.slice(4)
         for (let key in transb) {
             msage = msage.replace(new RegExp(key,"g"),transb[key])
