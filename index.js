@@ -25,8 +25,6 @@ let sa_second;
 let sa_minute;
 let idx;
 
-
-
 client.on('ready', () => {
     client.user.setActivity('ブンブンハローRED♪TUBE(type .help)')
     
