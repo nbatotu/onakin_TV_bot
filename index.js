@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const requi = require('./videos');
 const client = new Discord.Client();
-const TOKEN = process.env.TOKEN;
+const BOT_TOKEN = process.env.TOKEN;
 const janken = ["出ない～出ないんですねこれが出ないんだなあ～","ﾀﾀﾅｲ!","出たー出た！出たぁ..."]
 const hikagaos = ["https://i.imgur.com/s779CIq.gif","https://i.imgur.com/MlLATux.gif","https://i.imgur.com/IVWlELD.gif"]
 let onakintimer_name = [];
