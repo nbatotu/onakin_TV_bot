@@ -6,19 +6,15 @@ const janken = ["出ない～出ないんですねこれが出ないんだなあ
 const hikagaos = ["https://i.imgur.com/s779CIq.gif","https://i.imgur.com/MlLATux.gif","https://i.imgur.com/IVWlELD.gif"]
 let onakintimer_name = [];
 let onakintimer_time = [];
-
 let tamago_name = [];
 let tamago_num = [];
-
 let jankeka
 let rep = false;
 let hikagao = false;
-
 let randomhikakin = requi.vide;
 let resachara = requi.resa;
 let hikasin = requi.sinsu;
 let transb = requi.trb;
-
 let now;
 let oldsecond;
 let sa_second;
