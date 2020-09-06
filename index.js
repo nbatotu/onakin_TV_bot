@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Discord = require('discord.js');
 const requi = require('./videos');
 const client = new Discord.Client();
